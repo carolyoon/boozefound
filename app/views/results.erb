@@ -1,0 +1,14 @@
+<div id="results">
+<h2>Results for "<%=@search_string%>" in "<%=@location%>"</h2>
+
+<ul>
+  <% @results.each do |result| %>
+    <li>
+      <a id="results-font" href="<%= result[:url] %>"><%= result[:name] %></a>
+      <br><br>
+      <img class="image" src="<%= result[:image_url] %>">
+    </li>
+    <br><br>
+  <% end %>
+</ul>
+</div>
